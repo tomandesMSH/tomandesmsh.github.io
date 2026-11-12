@@ -409,22 +409,6 @@
     <img id="lightbox-img" src="" alt="">
   </div>
 
-  <!-- ░░ P3R-STYLE SOCIAL LINK POPUP ░░ -->
-  <div id="p3Toast" class="p3-toast" role="dialog" aria-label="Link to another portfolio" data-i18n-aria="p3Label">
-    <div class="p3-toast-panel">
-      <div class="p3-toast-stripe"></div>
-      <button class="p3-toast-close" id="p3ToastClose" aria-label="Close" data-i18n-aria="close">×</button>
-      <div class="p3-toast-body">
-        <p class="p3-toast-eyebrow" data-i18n="p3Eyebrow">welcome to my velvet room</p>
-        <p class="p3-toast-title">P3R Portfolio</p>
-        <p class="p3-toast-sub" data-i18n="p3Sub">Have a look at my second portfolio in Persona 3 Reload style | For now it is just a showcase.</p>
-        <a href="https://tomandesmsh.github.io/P3Rp/" target="_blank" rel="noopener" class="p3-toast-link" id="p3ToastLink">
-          <span data-i18n="open">Open</span> <span aria-hidden="true">→</span>
-        </a>
-      </div>
-    </div>
-  </div>
-
   <script>
     const navbar = document.getElementById('navbar');
     const navLinks = [...navbar.querySelectorAll('.nav-links a')];
@@ -495,23 +479,6 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
     revealEls.forEach(el => revealObserver.observe(el));
 
-    // ─── P3 Reload-style popup (once per session) ────────────────────
-    const p3Toast = document.getElementById('p3Toast');
-    const p3ToastClose = document.getElementById('p3ToastClose');
-    const p3ToastLink = document.getElementById('p3ToastLink');
-    const dismissP3Toast = () => {
-      p3Toast.classList.remove('open');
-      try { sessionStorage.setItem('p3ToastShown', '1'); } catch (e) {}
-    };
-    try {
-      if (!sessionStorage.getItem('p3ToastShown')) {
-        setTimeout(() => p3Toast.classList.add('open'), 1800);
-      }
-    } catch (e) {
-      setTimeout(() => p3Toast.classList.add('open'), 1800);
-    }
-    p3ToastClose.addEventListener('click', dismissP3Toast);
-    p3ToastLink.addEventListener('click', dismissP3Toast);
   </script>
   <script src="../i18n.js"></script>
 
