@@ -9,7 +9,7 @@
   "tagline": "I fix what shouldn't be broken,<br>and make what should have been made long ago..",
   "scrollDown": "Scroll down",
   "aboutTitle": "About me",
-  "aboutText": "I'm a high school student interested in programming, hardware and looking after operating systems. I like solving problems, however big or small - whether it's a clogged-up Windows or a mod for a game long forgotten. I enjoy working in Inkscape, Photoshop, Paint.NET and Blender, and looking after and building computers. I experiment with different technologies and programming languages, and keep adding new projects to my portfolio.",
+  "aboutText": "I'm a student at SOŠ EDUCAnet Brno, interested in programming, hardware and looking after operating systems. I mostly write Windows tools in C# and Python, web apps in HTML/JS/TS and game mods. I like solving problems, however big or small - whether it's a clogged-up Windows or a mod for a game long forgotten. I enjoy working in Inkscape, Photoshop, Paint.NET and Blender, and looking after and building computers. At home I run an Ubuntu server with Jellyfin and CasaOS, where I try out Linux and networking; on the desktop I use Tiny11 and CachyOS.",
   "projectsTitle": "Projects",
   "webProjects": "Web projects",
   "games": "Games and mods",
@@ -35,6 +35,7 @@
   "pStatsHud": " - Isaac's current stats and the devil/angel room chances, like in Repentance. (ActionScript, Python)",
   "pDebugConsole": " - The debug console from Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)",
   "pShareSeed": " - A mod for The Binding of Isaac: Repentance+. Packs the seed and your unlocks into one code, so everyone plays the same run. (Lua)",
+  "pRunHistory": " - Statistics for The Binding of Isaac: Repentance+ (REPENTOGON). The mod records every run and a web page turns them into statistics: win rate, bosses, items, records. (Lua, TypeScript)",
   "pUpgrader": " - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua)",
   "pJsab": " - A save editor for Just Shapes and Beats. (Python)",
   "pWasd": " - WASD controls in games that only support the arrow keys. (Python)",
@@ -59,5 +60,7 @@
   "gConstruct": "A game in Construct3",
   "contactTitle": "Contact:",
   "report": "Report a problem",
+  "emailPersonal": "Email (personal)",
+  "emailWork": "Email (work)",
   "ogDescription": "Portfolio of tomandesMSH: projects, artwork, certificates and more. Have a look at the projects and the gallery."
 }
