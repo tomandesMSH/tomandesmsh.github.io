@@ -92,6 +92,7 @@
   const send = document.getElementById('send');
   const startedAt = Date.now();
   const params = new URLSearchParams(location.search);
+  const embedded = params.get('embed') === '1';
 
   // The language: from the link, else the reader's last pick (shared with the home page), else the browser's
   // (Czech and Slovak read Czech).
@@ -134,6 +135,8 @@
   if (params.get('app') && app.querySelector(`option[value="${CSS.escape(params.get('app'))}"]`)) app.value = params.get('app');
   if (params.get('version')) document.getElementById('version').value = params.get('version').slice(0, 40);
   if (params.get('zus') === '1') zus.checked = true;
+  // "Report another" keeps the link's settings (app, embed...).
+  document.getElementById('again').href = './' + location.search;
   app.addEventListener('change', update);
   update();
   applyLang();
@@ -170,8 +173,17 @@
       const link = document.createElement('a');
       link.href = result.url;
       link.textContent = t('viewOnGitHub');
+      // In an app's window GitHub can't open inside it: a new tab.
+      if (embedded) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+      }
       text.append(link);
       done.hidden = false;
+      // Tell the app around it (it may say thanks or close the window).
+      if (embedded && window.parent !== window) {
+        window.parent.postMessage({ type: 'tomandes-report', status: 'sent', number: result.number }, '*');
+      }
       done.scrollIntoView({ block: 'start' });
     } catch (err) {
       // What was written stays in the form - nothing is lost.
