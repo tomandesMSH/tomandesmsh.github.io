@@ -643,3 +643,23 @@ footer {
   margin-left: 4px;
   vertical-align: 2px;
 }
+
+.project-sort {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font: 500 0.85rem var(--font);
+  color: var(--text-sub);
+}
+.project-sort select {
+  font: 500 0.85rem var(--font);
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.project-sort select:hover, .project-sort select:focus { border-color: var(--blue-glow); outline: none; }
+@media (max-width: 640px) { .project-sort { margin-left: 0; } }

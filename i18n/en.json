@@ -70,5 +70,13 @@
   "tabGames": "Games and mods",
   "tabWindows": "Windows",
   "tabWeb": "Web",
-  "tabUtilities": "Utilities"
+  "tabUtilities": "Utilities",
+  "sortBy": "Sort:",
+  "sortDefault": "Default",
+  "sortNewest": "Newest",
+  "sortOldest": "Oldest",
+  "sortHardest": "Most challenging",
+  "sortEasiest": "Simplest",
+  "sortAz": "A–Z",
+  "sortZa": "Z–A"
 }

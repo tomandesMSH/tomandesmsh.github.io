@@ -105,12 +105,23 @@
         <button type="button" class="project-tab" data-group="windows" aria-pressed="false" data-i18n="tabWindows">Windows</button>
         <button type="button" class="project-tab" data-group="web" aria-pressed="false" data-i18n="tabWeb">Web</button>
         <button type="button" class="project-tab" data-group="utilities" aria-pressed="false" data-i18n="tabUtilities">Utilities</button>
+        <label class="project-sort"><span data-i18n="sortBy">Sort:</span>
+          <select id="projectSort">
+            <option value="default" data-i18n="sortDefault">Default</option>
+            <option value="newest" data-i18n="sortNewest">Newest</option>
+            <option value="oldest" data-i18n="sortOldest">Oldest</option>
+            <option value="hardest" data-i18n="sortHardest">Most challenging</option>
+            <option value="easiest" data-i18n="sortEasiest">Simplest</option>
+            <option value="az" data-i18n="sortAz">A–Z</option>
+            <option value="za" data-i18n="sortZa">Z–A</option>
+          </select>
+        </label>
       </div>
 
       <div class="project-group" data-group="games">
       <h2 class="section-title" data-i18n="games">Games and mods</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - A mod installer for the original Flash version of The Binding of Isaac. Tick the mods, click Install and play. (Python, C#)</span>
+        <li data-date="2026-10-11" data-difficulty="4"><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - A mod installer for the original Flash version of The Binding of Isaac. Tick the mods, click Install and play. (Python, C#)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest" data-i18n="download">Download</a></li>
             <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a><span data-i18n="pEid"> - Descriptions of items, trinkets, cards and pills right in the game. (Lua, ActionScript, Python)</span></li>
@@ -122,7 +133,7 @@
             <figure class="shot" data-label="screenshots/tboi-flash-mods-2.png"><img src="../screenshots/tboi-flash-mods-2.png" alt="TBoI Flash Mods - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - A mod for The Binding of Isaac: Repentance+. Packs the seed and your unlocks into one code, so everyone plays the same run. (Lua)</span>
+        <li data-date="2026-10-14" data-difficulty="4"><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - A mod for The Binding of Isaac: Repentance+. Packs the seed and your unlocks into one code, so everyone plays the same run. (Lua)</span>
           <ul>
             <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819928092">Steam Workshop</a></li>
           </ul>
@@ -131,7 +142,7 @@
             <figure class="shot" data-label="screenshots/shareseed-2.png"><img src="../screenshots/shareseed-2.png" alt="ShareSeed - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandes.eu/isaac-run-history/">Isaac Run History</a><span data-i18n="pRunHistory"> - Statistics for The Binding of Isaac: Repentance+ (REPENTOGON). The mod records every run and a web page turns them into statistics: win rate, bosses, items, records. (Lua, TypeScript)</span>
+        <li data-date="2026-11-14" data-difficulty="4"><a href="https://tomandes.eu/isaac-run-history/">Isaac Run History</a><span data-i18n="pRunHistory"> - Statistics for The Binding of Isaac: Repentance+ (REPENTOGON). The mod records every run and a web page turns them into statistics: win rate, bosses, items, records. (Lua, TypeScript)</span>
           <ul>
             <li><a href="https://tomandes.eu/isaac-run-history/" data-i18n="website">Website</a></li>
             <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3841181539">Steam Workshop</a></li>
@@ -142,7 +153,7 @@
             <figure class="shot" data-label="screenshots/isaac-run-history-2.jpg"><img src="../screenshots/isaac-run-history-2.jpg" alt="Isaac Run History - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - A save editor for Just Shapes and Beats. (Python)</span>
+        <li data-date="2026-03-29" data-difficulty="3"><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - A save editor for Just Shapes and Beats. (Python)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest" data-i18n="download">Download</a></li>
           </ul>
@@ -151,12 +162,12 @@
             <figure class="shot" data-label="screenshots/jsab-save-editor-2.png"><img src="../screenshots/jsab-save-editor-2.png" alt="JSaB Save Editor - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - WASD controls in games that only support the arrow keys. (Python)</span>
+        <li data-date="2026-03-14" data-difficulty="1"><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - WASD controls in games that only support the arrow keys. (Python)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Download</a></li>
           </ul>
         </li>
-        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> <span class="status-badge" data-i18n="statusOnHold">On hold</span><span data-i18n="pUpgrader"> - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua) I'm not working on it anymore, my designer ran off.</span>
+        <li data-date="2026-09-30" data-difficulty="3"><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> <span class="status-badge" data-i18n="statusOnHold">On hold</span><span data-i18n="pUpgrader"> - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua) I'm not working on it anymore, my designer ran off.</span>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="../screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="../screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
@@ -168,7 +179,7 @@
       <div class="project-group" data-group="windows">
       <h2 class="section-title" data-i18n="windowsApps">Windows apps</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a><span data-i18n="pKaspar"> - A Windows "debloater", a set of tools for tweaking the system (C#, WinUI 3)</span>
+        <li data-date="2026-01-31" data-difficulty="4"><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a><span data-i18n="pKaspar"> - A Windows "debloater", a set of tools for tweaking the system (C#, WinUI 3)</span>
           <ul>
             <li><a href="https://tomandes.eu/KASPARDocs/" data-i18n="docs">Documentation</a></li>
             <li><a href="https://github.com/tomandesMSH/KASPAR/releases/latest" data-i18n="download">Download</a></li>
@@ -179,7 +190,7 @@
             <figure class="shot" data-label="screenshots/kaspar-2.png"><img src="../screenshots/kaspar-2.png" alt="KASPAR - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/Keyboard-Utils">Keyboard Utils</a><span data-i18n="pKeyboardUtils"> - An app for practising the piano. Plays songs from MIDI/MusicXML as falling notes, listens to what you play (microphone, MIDI keyboard), scores you, records your playing and can turn audio into notes. (C#)</span>
+        <li data-date="2026-11-02" data-difficulty="5"><a href="https://github.com/tomandesMSH/Keyboard-Utils">Keyboard Utils</a><span data-i18n="pKeyboardUtils"> - An app for practising the piano. Plays songs from MIDI/MusicXML as falling notes, listens to what you play (microphone, MIDI keyboard), scores you, records your playing and can turn audio into notes. (C#)</span>
           <ul>
             <li><a href="https://tomandes.eu/Keyboard-Utils/" data-i18n="website">Website</a></li>
             <li><a href="https://github.com/tomandesMSH/Keyboard-Utils/releases/latest" data-i18n="download">Download</a></li>
@@ -190,7 +201,7 @@
             <figure class="shot" data-label="screenshots/keyboard-utils-2.png"><img src="../screenshots/keyboard-utils-2.png" alt="Keyboard Utils - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay">Custom-AutoPlay</a><span data-i18n="pCustomAutoplay"> - A tool that edits the Windows AutoPlay registry for you (Python)</span>
+        <li data-date="2026-01-11" data-difficulty="2"><a href="https://github.com/tomandesMSH/Custom-AutoPlay">Custom-AutoPlay</a><span data-i18n="pCustomAutoplay"> - A tool that edits the Windows AutoPlay registry for you (Python)</span>
           <ul>
             <li><a href="https://tomandes.eu/Custom-AutoPlay-Docs/" data-i18n="docs">Documentation</a></li>
             <li><a href="https://github.com/tomandesMSH/Custom-AutoPlay/releases/latest" data-i18n="download">Download</a></li>
@@ -200,7 +211,7 @@
             <figure class="shot" data-label="screenshots/custom-autoplay-2.png"><img src="../screenshots/custom-autoplay-2.png" alt="Custom-AutoPlay - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/SoundpadTranslator">Soundpad Translator</a><span data-i18n="pSoundpad"> - A second keyboard as a soundboard for Soundpad. (C#)</span>
+        <li data-date="2026-10-03" data-difficulty="3"><a href="https://github.com/tomandesMSH/SoundpadTranslator">Soundpad Translator</a><span data-i18n="pSoundpad"> - A second keyboard as a soundboard for Soundpad. (C#)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/SoundpadTranslator/releases/latest" data-i18n="download">Download</a></li>
           </ul>
@@ -209,7 +220,7 @@
             <figure class="shot" data-label="screenshots/soundpad-translator-2.png"><img src="../screenshots/soundpad-translator-2.png" alt="Soundpad Translator - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/ClipThat">ClipThat</a><span data-i18n="pClipThat"> - A replacement for the Windows 11 clipboard history. (Python)</span>
+        <li data-date="2026-08-12" data-difficulty="3"><a href="https://github.com/tomandesMSH/ClipThat">ClipThat</a><span data-i18n="pClipThat"> - A replacement for the Windows 11 clipboard history. (Python)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/ClipThat/releases/latest" data-i18n="download">Download</a></li>
           </ul>
@@ -224,7 +235,7 @@
       <div class="project-group" data-group="web">
       <h2 class="section-title" data-i18n="webProjects">Web projects</h2>
       <ul class="project-list">
-        <li><a href="https://muzio.tomandes.eu/">Muzio</a><span data-i18n="pKeyboardHero"> - A web app for ZUŠ Moravský Krumlov (an art school) that gets children to practise their instrument at home regularly, in a playful way. (TypeScript)</span>
+        <li data-date="2026-08-03" data-difficulty="5"><a href="https://muzio.tomandes.eu/">Muzio</a><span data-i18n="pKeyboardHero"> - A web app for ZUŠ Moravský Krumlov (an art school) that gets children to practise their instrument at home regularly, in a playful way. (TypeScript)</span>
           <ul>
             <li><a href="https://tomandes.eu/Keyboard-Hero-Docs/" data-i18n="docs">Documentation</a></li>
             <li><a href="https://github.com/tomandesMSH/Muzio">GitHub</a></li>
@@ -234,7 +245,7 @@
             <figure class="shot" data-label="screenshots/keyboard-hero-2.png"><img src="../screenshots/keyboard-hero-2.png" alt="Muzio - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandes.eu/compendium-p3r/">Persona 3 Reload - Compendium</a><span data-i18n="pCompendium"> - The complete Compendium from Persona 3 Reload. (HTML, JS)</span>
+        <li data-date="2026-09-27" data-difficulty="2"><a href="https://tomandes.eu/compendium-p3r/">Persona 3 Reload - Compendium</a><span data-i18n="pCompendium"> - The complete Compendium from Persona 3 Reload. (HTML, JS)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/compendium-p3r">GitHub</a></li>
           </ul>
@@ -243,7 +254,7 @@
             <figure class="shot" data-label="screenshots/compendium-p3r-2.png"><img src="../screenshots/compendium-p3r-2.png" alt="Persona 3 Reload - Compendium - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://neofetch.tomandes.eu/">neofetch-readme</a><span data-i18n="pNeofetch"> - An animated neofetch-style card for a GitHub profile README. (Python, JS)</span>
+        <li data-date="2026-10-31" data-difficulty="3"><a href="https://neofetch.tomandes.eu/">neofetch-readme</a><span data-i18n="pNeofetch"> - An animated neofetch-style card for a GitHub profile README. (Python, JS)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/neofetch-readme">GitHub</a></li>
           </ul>
@@ -252,7 +263,7 @@
             <figure class="shot" data-label="screenshots/neofetch-readme-2.png"><img src="../screenshots/neofetch-readme-2.png" alt="neofetch-readme - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandes.eu/P3Rp/">P3R Portfolio</a><span data-i18n="pP3rp"> - A second portfolio in the style of Persona 3 Reload. (HTML, CSS, JS)</span>
+        <li data-date="2026-09-16" data-difficulty="2"><a href="https://tomandes.eu/P3Rp/">P3R Portfolio</a><span data-i18n="pP3rp"> - A second portfolio in the style of Persona 3 Reload. (HTML, CSS, JS)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/P3Rp">GitHub</a></li>
           </ul>
@@ -261,12 +272,12 @@
             <figure class="shot" data-label="screenshots/p3r-portfolio-2.png"><img src="../screenshots/p3r-portfolio-2.png" alt="P3R Portfolio - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://tomandes.eu/SonicDecomp/">Sonic Decompilation</a><span data-i18n="pSonic"> - A guide to building the Sonic game decompilations legally (RSDK, HTML, CSS).</span>
+        <li data-date="2026-03-12" data-difficulty="1"><a href="https://tomandes.eu/SonicDecomp/">Sonic Decompilation</a><span data-i18n="pSonic"> - A guide to building the Sonic game decompilations legally (RSDK, HTML, CSS).</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/SonicDecomp">GitHub</a></li>
           </ul>
         </li>
-        <li><a href="https://tomandes.eu/report/">tomandes-report</a><span data-i18n="pReport"> - Report bugs and ideas for my apps without a GitHub account: the form becomes an issue in that app's repository. (TypeScript, Vercel)</span>
+        <li data-date="2026-11-08" data-difficulty="2"><a href="https://tomandes.eu/report/">tomandes-report</a><span data-i18n="pReport"> - Report bugs and ideas for my apps without a GitHub account: the form becomes an issue in that app's repository. (TypeScript, Vercel)</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/tomandes-report">GitHub</a></li>
           </ul>
@@ -277,13 +288,13 @@
       <div class="project-group" data-group="utilities">
       <h2 class="section-title" data-i18n="utilities">Utilities and scripts</h2>
       <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a><span data-i18n="pVytahnito"> - A Chrome extension that downloads every image and video on a page. (JS)</span>
+        <li data-date="2026-09-30" data-difficulty="2"><a href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a><span data-i18n="pVytahnito"> - A Chrome extension that downloads every image and video on a page. (JS)</span>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/vytahnito-1.png"><img src="../screenshots/vytahnito-1.png" alt="VytáhniTo - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/vytahnito-2.png"><img src="../screenshots/vytahnito-2.png" alt="VytáhniTo - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/ClassroomSearch">ClassroomSearch</a><span data-i18n="pClassroom"> - A Tampermonkey userscript: live search and custom labels in Google Classroom. (JS)</span>
+        <li data-date="2026-11-06" data-difficulty="1"><a href="https://github.com/tomandesMSH/ClassroomSearch">ClassroomSearch</a><span data-i18n="pClassroom"> - A Tampermonkey userscript: live search and custom labels in Google Classroom. (JS)</span>
           <ul>
             <li><a href="https://greasyfork.org/en/scripts/604099-google-classroom-search">Greasy Fork</a></li>
           </ul>
@@ -292,7 +303,7 @@
             <figure class="shot" data-label="screenshots/classroomsearch-2.png"><img src="../screenshots/classroomsearch-2.png" alt="ClassroomSearch - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/QUbuntu">QUbuntu</a><span data-i18n="pQubuntu"> - Quick access to an Ubuntu server: Wake-on-LAN, SSH, CasaOS, Jellyfin. (Python)</span>
+        <li data-date="2026-08-18" data-difficulty="2"><a href="https://github.com/tomandesMSH/QUbuntu">QUbuntu</a><span data-i18n="pQubuntu"> - Quick access to an Ubuntu server: Wake-on-LAN, SSH, CasaOS, Jellyfin. (Python)</span>
           <ul>
             <li><a href="https://tomandes.eu/QUbuntu/" data-i18n="website">Website</a></li>
           </ul>
@@ -301,12 +312,12 @@
             <figure class="shot" data-label="screenshots/qubuntu-2.png"><img src="../screenshots/qubuntu-2.png" alt="QUbuntu - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
           </div>
         </li>
-        <li><a href="https://github.com/tomandesMSH/mk-pkg">mk-pkg</a><span data-i18n="pMkPkg"> - A package that recognises and captures input from a second (macro) keyboard. Used by Soundpad Translator and Keyboard Utils.</span>
+        <li data-date="2026-11-03" data-difficulty="2"><a href="https://github.com/tomandesMSH/mk-pkg">mk-pkg</a><span data-i18n="pMkPkg"> - A package that recognises and captures input from a second (macro) keyboard. Used by Soundpad Translator and Keyboard Utils.</span>
           <ul>
             <li><a href="https://github.com/tomandesMSH/mk-pkg/releases/latest" data-i18n="download">Download</a></li>
           </ul>
         </li>
-        <li><a href="https://github.com/tomandesMSH/RepoSync">RepoSync</a><span data-i18n="pRepoSync"> - Clones and updates all repositories of selected GitHub users, with filters in a single config.json. (Python)</span></li>
+        <li data-date="2026-10-20" data-difficulty="1"><a href="https://github.com/tomandesMSH/RepoSync">RepoSync</a><span data-i18n="pRepoSync"> - Clones and updates all repositories of selected GitHub users, with filters in a single config.json. (Python)</span></li>
       </ul>
       </div>
 
@@ -514,6 +525,24 @@
       });
       projectGroups.forEach(g => { g.hidden = group !== 'all' && g.dataset.group !== group; });
     }));
+
+    // ─── Project sorting (within each category) ──────────────────────
+    const projectLists = [...document.querySelectorAll('.project-group > .project-list')];
+    projectLists.forEach(list => [...list.children].forEach((li, i) => { li.dataset.order = i; }));
+    const byName = li => li.querySelector('a').textContent.trim();
+    const sorters = {
+      default: (a, b) => a.dataset.order - b.dataset.order,
+      newest: (a, b) => b.dataset.date.localeCompare(a.dataset.date),
+      oldest: (a, b) => a.dataset.date.localeCompare(b.dataset.date),
+      hardest: (a, b) => b.dataset.difficulty - a.dataset.difficulty || byName(a).localeCompare(byName(b), 'cs'),
+      easiest: (a, b) => a.dataset.difficulty - b.dataset.difficulty || byName(a).localeCompare(byName(b), 'cs'),
+      az: (a, b) => byName(a).localeCompare(byName(b), 'cs'),
+      za: (a, b) => byName(b).localeCompare(byName(a), 'cs'),
+    };
+    document.getElementById('projectSort').addEventListener('change', (e) => {
+      const sorter = sorters[e.target.value] || sorters.default;
+      projectLists.forEach(list => [...list.children].sort(sorter).forEach(li => list.appendChild(li)));
+    });
 
     // ─── Scroll-reveal sections ──────────────────────────────────────
     const revealEls = document.querySelectorAll('.reveal');
