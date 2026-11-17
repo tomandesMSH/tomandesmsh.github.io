@@ -663,3 +663,15 @@ footer {
 }
 .project-sort select:hover, .project-sort select:focus { border-color: var(--blue-glow); outline: none; }
 @media (max-width: 640px) { .project-sort { margin-left: 0; } }
+.sort-dir {
+  font: 600 0.95rem var(--font);
+  color: var(--text);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  width: 34px;
+  height: 32px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+.sort-dir:hover, .sort-dir:focus-visible { border-color: var(--blue-glow); outline: none; }

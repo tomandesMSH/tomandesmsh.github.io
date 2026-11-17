@@ -73,10 +73,8 @@
   "tabUtilities": "Utilities",
   "sortBy": "Sort:",
   "sortDefault": "Default",
-  "sortNewest": "Newest",
-  "sortOldest": "Oldest",
-  "sortHardest": "Most challenging",
-  "sortEasiest": "Simplest",
-  "sortAz": "A–Z",
-  "sortZa": "Z–A"
+  "sortDate": "Date",
+  "sortDifficulty": "Difficulty",
+  "sortName": "Name",
+  "sortReverse": "Reverse the order"
 }

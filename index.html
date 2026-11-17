@@ -112,13 +112,11 @@
         <label class="project-sort"><span data-i18n="sortBy">Řadit:</span>
           <select id="projectSort">
             <option value="default" data-i18n="sortDefault">Výchozí</option>
-            <option value="newest" data-i18n="sortNewest">Nejnovější</option>
-            <option value="oldest" data-i18n="sortOldest">Nejstarší</option>
-            <option value="hardest" data-i18n="sortHardest">Nejnáročnější</option>
-            <option value="easiest" data-i18n="sortEasiest">Nejjednodušší</option>
-            <option value="az" data-i18n="sortAz">Abecedně A–Z</option>
-            <option value="za" data-i18n="sortZa">Abecedně Z–A</option>
+            <option value="date" data-i18n="sortDate">Datum</option>
+            <option value="difficulty" data-i18n="sortDifficulty">Náročnost</option>
+            <option value="name" data-i18n="sortName">Abecedně</option>
           </select>
+          <button type="button" id="projectSortDir" class="sort-dir" aria-label="Obrátit pořadí" data-i18n-aria="sortReverse" aria-pressed="false">↓</button>
         </label>
       </div>
 
@@ -534,18 +532,27 @@
     const projectLists = [...document.querySelectorAll('.project-group > .project-list')];
     projectLists.forEach(list => [...list.children].forEach((li, i) => { li.dataset.order = i; }));
     const byName = li => li.querySelector('a').textContent.trim();
+    // each key's natural direction: newest, hardest first, A-Z; the arrow button reverses it
     const sorters = {
       default: (a, b) => a.dataset.order - b.dataset.order,
-      newest: (a, b) => b.dataset.date.localeCompare(a.dataset.date),
-      oldest: (a, b) => a.dataset.date.localeCompare(b.dataset.date),
-      hardest: (a, b) => b.dataset.difficulty - a.dataset.difficulty || byName(a).localeCompare(byName(b), 'cs'),
-      easiest: (a, b) => a.dataset.difficulty - b.dataset.difficulty || byName(a).localeCompare(byName(b), 'cs'),
-      az: (a, b) => byName(a).localeCompare(byName(b), 'cs'),
-      za: (a, b) => byName(b).localeCompare(byName(a), 'cs'),
+      date: (a, b) => b.dataset.date.localeCompare(a.dataset.date) || byName(a).localeCompare(byName(b), 'cs'),
+      difficulty: (a, b) => b.dataset.difficulty - a.dataset.difficulty || byName(a).localeCompare(byName(b), 'cs'),
+      name: (a, b) => byName(a).localeCompare(byName(b), 'cs'),
     };
-    document.getElementById('projectSort').addEventListener('change', (e) => {
-      const sorter = sorters[e.target.value] || sorters.default;
-      projectLists.forEach(list => [...list.children].sort(sorter).forEach(li => list.appendChild(li)));
+    const sortSelect = document.getElementById('projectSort');
+    const sortDir = document.getElementById('projectSortDir');
+    let reversed = false;
+    function sortProjects() {
+      const sorter = sorters[sortSelect.value] || sorters.default;
+      const ordered = reversed ? (a, b) => sorter(b, a) : sorter;
+      projectLists.forEach(list => [...list.children].sort(ordered).forEach(li => list.appendChild(li)));
+    }
+    sortSelect.addEventListener('change', sortProjects);
+    sortDir.addEventListener('click', () => {
+      reversed = !reversed;
+      sortDir.textContent = reversed ? '↑' : '↓';
+      sortDir.setAttribute('aria-pressed', reversed);
+      sortProjects();
     });
 
     // ─── Scroll-reveal sections ──────────────────────────────────────
