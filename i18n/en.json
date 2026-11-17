@@ -35,7 +35,7 @@
   "pDebugConsole": " - The debug console from Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)",
   "pShareSeed": " - A mod for The Binding of Isaac: Repentance+. Packs the seed and your unlocks into one code, so everyone plays the same run. (Lua)",
   "pRunHistory": " - Statistics for The Binding of Isaac: Repentance+ (REPENTOGON). The mod records every run and a web page turns them into statistics: win rate, bosses, items, records. (Lua, TypeScript)",
-  "pUpgrader": " - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua) I'm not working on it anymore, my designer ran off.",
+  "pUpgrader": " - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua) Development is on hold.",
   "pJsab": " - A save editor for Just Shapes and Beats. (Python)",
   "pWasd": " - WASD controls in games that only support the arrow keys. (Python)",
   "pVytahnito": " - A Chrome extension that downloads every image and video on a page. (JS)",

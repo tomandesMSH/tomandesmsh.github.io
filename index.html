@@ -169,7 +169,7 @@
             <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Stáhnout</a></li>
           </ul>
         </li>
-        <li data-date="2026-09-30" data-difficulty="3"><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> <span class="status-badge" data-i18n="statusOnHold">Pozastaveno</span><span data-i18n="pUpgrader"> - Mod pro The Binding of Isaac: Repentance+, vylepšování a duplikace itemů. (Lua) Už na něm nepracuju, utekla mi designérka.</span>
+        <li data-date="2026-09-30" data-difficulty="3"><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> <span class="status-badge" data-i18n="statusOnHold">Pozastaveno</span><span data-i18n="pUpgrader"> - Mod pro The Binding of Isaac: Repentance+, vylepšování a duplikace itemů. (Lua) Vývoj je pozastavený.</span>
           <div class="project-shots">
             <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
             <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
@@ -516,21 +516,31 @@
       });
     });
 
-    // ─── Project categories ──────────────────────────────────────────
+    // ─── Project categories and sorting ──────────────────────────────
+    // A category tab shows that group, sorted inside. "All" with a sort other than the default puts every project
+    // into one list (without the category headings), so the order is the whole portfolio's.
     const projectTabs = document.querySelectorAll('.project-tab');
-    const projectGroups = document.querySelectorAll('.project-group');
-    projectTabs.forEach(tab => tab.addEventListener('click', () => {
-      const group = tab.dataset.group;
-      projectTabs.forEach(t => {
-        t.classList.toggle('is-active', t === tab);
-        t.setAttribute('aria-pressed', t === tab);
-      });
-      projectGroups.forEach(g => { g.hidden = group !== 'all' && g.dataset.group !== group; });
+    const projectGroups = [...document.querySelectorAll('.project-group')];
+    const projectItems = [];
+    projectGroups.forEach(g => [...g.querySelector(':scope > .project-list').children].forEach(li => {
+      li.dataset.order = projectItems.length;
+      li.homeList = li.parentElement;
+      projectItems.push(li);
+      // date / difficulty next to the name, shown only while sorting by it
+      const link = li.querySelector('a');
+      const meta = document.createElement('span');
+      meta.className = 'project-meta';
+      const [y, m] = li.dataset.date.split('-');
+      meta.innerHTML = `<span class="meta-date">${m}/${y}</span><span class="meta-difficulty" title="${li.dataset.difficulty}/5">${'●'.repeat(li.dataset.difficulty)}${'○'.repeat(5 - li.dataset.difficulty)}</span>`;
+      link.after(meta);
     }));
+    const mergedGroup = document.createElement('div');
+    mergedGroup.className = 'project-group';
+    mergedGroup.hidden = true;
+    mergedGroup.innerHTML = '<ul class="project-list"></ul>';
+    projectGroups[projectGroups.length - 1].after(mergedGroup);
+    const mergedList = mergedGroup.firstElementChild;
 
-    // ─── Project sorting (within each category) ──────────────────────
-    const projectLists = [...document.querySelectorAll('.project-group > .project-list')];
-    projectLists.forEach(list => [...list.children].forEach((li, i) => { li.dataset.order = i; }));
     const byName = li => li.querySelector('a').textContent.trim();
     // each key's natural direction: newest, hardest first, A-Z; the arrow button reverses it
     const sorters = {
@@ -541,18 +551,33 @@
     };
     const sortSelect = document.getElementById('projectSort');
     const sortDir = document.getElementById('projectSortDir');
-    let reversed = false;
-    function sortProjects() {
-      const sorter = sorters[sortSelect.value] || sorters.default;
-      const ordered = reversed ? (a, b) => sorter(b, a) : sorter;
-      projectLists.forEach(list => [...list.children].sort(ordered).forEach(li => list.appendChild(li)));
+    const projectsSection = document.getElementById('projects');
+    let group = 'all', reversed = false;
+
+    function renderProjects() {
+      const key = sortSelect.value;
+      const sorter = sorters[key] || sorters.default;
+      const ordered = [...projectItems].sort(reversed ? (a, b) => sorter(b, a) : sorter);
+      const merged = group === 'all' && key !== 'default';
+      ordered.forEach(li => (merged ? mergedList : li.homeList).appendChild(li));
+      projectGroups.forEach(g => { g.hidden = merged || (group !== 'all' && g.dataset.group !== group); });
+      mergedGroup.hidden = !merged;
+      projectsSection.dataset.sort = key;
     }
-    sortSelect.addEventListener('change', sortProjects);
+    projectTabs.forEach(tab => tab.addEventListener('click', () => {
+      group = tab.dataset.group;
+      projectTabs.forEach(t => {
+        t.classList.toggle('is-active', t === tab);
+        t.setAttribute('aria-pressed', t === tab);
+      });
+      renderProjects();
+    }));
+    sortSelect.addEventListener('change', renderProjects);
     sortDir.addEventListener('click', () => {
       reversed = !reversed;
       sortDir.textContent = reversed ? '↑' : '↓';
       sortDir.setAttribute('aria-pressed', reversed);
-      sortProjects();
+      renderProjects();
     });
 
     // ─── Scroll-reveal sections ──────────────────────────────────────

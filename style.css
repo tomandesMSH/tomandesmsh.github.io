@@ -675,3 +675,12 @@ footer {
   transition: border-color 0.2s;
 }
 .sort-dir:hover, .sort-dir:focus-visible { border-color: var(--blue-glow); outline: none; }
+
+/* date / difficulty after a project's name, only while sorting by it */
+.project-meta { display: none; margin-left: 6px; font: 500 0.75rem var(--mono); color: var(--text-sub); }
+.project-meta > span { display: none; border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; }
+.meta-difficulty { color: var(--blue-glow); letter-spacing: 0.05em; }
+#projects[data-sort="date"] .project-meta,
+#projects[data-sort="difficulty"] .project-meta { display: inline; }
+#projects[data-sort="date"] .meta-date,
+#projects[data-sort="difficulty"] .meta-difficulty { display: inline-block; }
