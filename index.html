@@ -103,7 +103,74 @@
     <section class="content-section reveal" id="projects">
       <h1 class="page-title" data-i18n="projectsTitle">Projekty</h1>
 
-      <h2 class="section-title">Windows Software</h2>
+      <div class="project-tabs" role="group" aria-label="Kategorie projektů" data-i18n-aria="projectTabs">
+        <button type="button" class="project-tab is-active" data-group="all" aria-pressed="true" data-i18n="tabAll">Vše</button>
+        <button type="button" class="project-tab" data-group="games" aria-pressed="false" data-i18n="tabGames">Hry a mody</button>
+        <button type="button" class="project-tab" data-group="windows" aria-pressed="false" data-i18n="tabWindows">Windows</button>
+        <button type="button" class="project-tab" data-group="web" aria-pressed="false" data-i18n="tabWeb">Web</button>
+        <button type="button" class="project-tab" data-group="utilities" aria-pressed="false" data-i18n="tabUtilities">Utility</button>
+      </div>
+
+      <div class="project-group" data-group="games">
+      <h2 class="section-title" data-i18n="games">Hry a mody</h2>
+      <ul class="project-list">
+        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - Instalátor modů pro původní Flash verzi The Binding of Isaac. Zaškrtneš mody, klikneš na Instalovat a hraješ. (Python, C#)</span>
+          <ul>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest" data-i18n="download">Stáhnout</a></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a><span data-i18n="pEid"> - Popisy itemů, trinketů, karet a pilulek přímo ve hře. (Lua, ActionScript, Python)</span></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-StatsHUD">Stats HUD</a><span data-i18n="pStatsHud"> - Aktuální staty Isaaca a šance na devil/angel room, jako v Repentance. (ActionScript, Python)</span></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-DebugConsole">Debug Console</a><span data-i18n="pDebugConsole"> - Debug konzole z Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)</span></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/tboi-flash-mods-1.png"><img src="screenshots/tboi-flash-mods-1.png" alt="TBoI Flash Mods - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/tboi-flash-mods-2.png"><img src="screenshots/tboi-flash-mods-2.png" alt="TBoI Flash Mods - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - Mod pro The Binding of Isaac: Repentance+. Zabalí seed i tvoje odemčené věci do jednoho kódu, takže run hraje každý stejně. (Lua)</span>
+          <ul>
+            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819928092">Steam Workshop</a></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/shareseed-1.png"><img src="screenshots/shareseed-1.png" alt="ShareSeed - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/shareseed-2.png"><img src="screenshots/shareseed-2.png" alt="ShareSeed - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://tomandes.eu/isaac-run-history/">Isaac Run History</a><span data-i18n="pRunHistory"> - Statistiky pro The Binding of Isaac: Repentance+ (REPENTOGON). Mod zaznamená každý run a webová stránka z nich udělá statistiky: win rate, bossové, itemy, rekordy. (Lua, TypeScript)</span>
+          <ul>
+            <li><a href="https://tomandes.eu/isaac-run-history/" data-i18n="website">Web</a></li>
+            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3841181539">Steam Workshop</a></li>
+            <li><a href="https://github.com/tomandesMSH/isaac-run-history">GitHub</a></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/isaac-run-history-1.jpg"><img src="screenshots/isaac-run-history-1.jpg" alt="Isaac Run History - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/isaac-run-history-2.jpg"><img src="screenshots/isaac-run-history-2.jpg" alt="Isaac Run History - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - Save editor pro hru Just Shapes and Beats. (Python)</span>
+          <ul>
+            <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest" data-i18n="download">Stáhnout</a></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/jsab-save-editor-1.png"><img src="screenshots/jsab-save-editor-1.png" alt="JSaB Save Editor - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/jsab-save-editor-2.png"><img src="screenshots/jsab-save-editor-2.png" alt="JSaB Save Editor - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - Ovládání WASD ve hrách podporující jen šipky. (Python)</span>
+          <ul>
+            <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Stáhnout</a></li>
+          </ul>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> <span class="status-badge" data-i18n="statusOnHold">Pozastaveno</span><span data-i18n="pUpgrader"> - Mod pro The Binding of Isaac: Repentance+, vylepšování a duplikace itemů. (Lua) Už na něm nepracuju, utekla mi designérka.</span>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+      </ul>
+      </div>
+
+      <div class="project-group" data-group="windows">
+      <h2 class="section-title" data-i18n="windowsApps">Windows aplikace</h2>
       <ul class="project-list">
         <li><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a><span data-i18n="pKaspar"> - Windows "debloater", sada nástrojů pro úpravu systému (C#, WinUI 3)</span>
           <ul>
@@ -156,7 +223,9 @@
           </div>
         </li>
       </ul>
+      </div>
 
+      <div class="project-group" data-group="web">
       <h2 class="section-title" data-i18n="webProjects">Webové projekty</h2>
       <ul class="project-list">
         <li><a href="https://muzio.tomandes.eu/">Muzio</a><span data-i18n="pKeyboardHero"> - Webová aplikace pro ZUŠ Moravský Krumlov s cílem motivovat děti k pravidelnému domácímu cvičení na hudební nástroj hravou formou. (TypeScript)</span>
@@ -207,64 +276,10 @@
           </ul>
         </li>
       </ul>
+      </div>
 
-      <h2 class="section-title" data-i18n="games">Hry a mody</h2>
-      <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - Instalátor modů pro původní Flash verzi The Binding of Isaac. Zaškrtneš mody, klikneš na Instalovat a hraješ. (Python, C#)</span>
-          <ul>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest" data-i18n="download">Stáhnout</a></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a><span data-i18n="pEid"> - Popisy itemů, trinketů, karet a pilulek přímo ve hře. (Lua, ActionScript, Python)</span></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-StatsHUD">Stats HUD</a><span data-i18n="pStatsHud"> - Aktuální staty Isaaca a šance na devil/angel room, jako v Repentance. (ActionScript, Python)</span></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-DebugConsole">Debug Console</a><span data-i18n="pDebugConsole"> - Debug konzole z Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)</span></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/tboi-flash-mods-1.png"><img src="screenshots/tboi-flash-mods-1.png" alt="TBoI Flash Mods - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/tboi-flash-mods-2.png"><img src="screenshots/tboi-flash-mods-2.png" alt="TBoI Flash Mods - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - Mod pro The Binding of Isaac: Repentance+. Zabalí seed i tvoje odemčené věci do jednoho kódu, takže run hraje každý stejně. (Lua)</span>
-          <ul>
-            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819928092">Steam Workshop</a></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/shareseed-1.png"><img src="screenshots/shareseed-1.png" alt="ShareSeed - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/shareseed-2.png"><img src="screenshots/shareseed-2.png" alt="ShareSeed - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://tomandes.eu/isaac-run-history/">Isaac Run History</a><span data-i18n="pRunHistory"> - Statistiky pro The Binding of Isaac: Repentance+ (REPENTOGON). Mod zaznamená každý run a webová stránka z nich udělá statistiky: win rate, bossové, itemy, rekordy. (Lua, TypeScript)</span>
-          <ul>
-            <li><a href="https://tomandes.eu/isaac-run-history/" data-i18n="website">Web</a></li>
-            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3841181539">Steam Workshop</a></li>
-            <li><a href="https://github.com/tomandesMSH/isaac-run-history">GitHub</a></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/isaac-run-history-1.jpg"><img src="screenshots/isaac-run-history-1.jpg" alt="Isaac Run History - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/isaac-run-history-2.jpg"><img src="screenshots/isaac-run-history-2.jpg" alt="Isaac Run History - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a><span data-i18n="pUpgrader"> - Mod pro The Binding of Isaac: Repentance+, vylepšování a duplikace itemů. (Lua)</span>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - Save editor pro hru Just Shapes and Beats. (Python)</span>
-          <ul>
-            <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest" data-i18n="download">Stáhnout</a></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/jsab-save-editor-1.png"><img src="screenshots/jsab-save-editor-1.png" alt="JSaB Save Editor - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/jsab-save-editor-2.png"><img src="screenshots/jsab-save-editor-2.png" alt="JSaB Save Editor - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - Ovládání WASD ve hrách podporující jen šipky. (Python)</span>
-          <ul>
-            <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Stáhnout</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <h2 class="section-title" data-i18n="other">Ostatní</h2>
+      <div class="project-group" data-group="utilities">
+      <h2 class="section-title" data-i18n="utilities">Utility a skripty</h2>
       <ul class="project-list">
         <li><a href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a><span data-i18n="pVytahnito"> - Rozšíření pro Chrome, které stáhne všechny obrázky a videa ze stránky. (JS)</span>
           <div class="project-shots">
@@ -297,6 +312,7 @@
         </li>
         <li><a href="https://github.com/tomandesMSH/RepoSync">RepoSync</a><span data-i18n="pRepoSync"> - Naklonuje a aktualizuje všechny repozitáře vybraných GitHub uživatelů, s filtry v jednom config.json. (Python)</span></li>
       </ul>
+      </div>
 
     </section>
 
@@ -490,6 +506,18 @@
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // ─── Project categories ──────────────────────────────────────────
+    const projectTabs = document.querySelectorAll('.project-tab');
+    const projectGroups = document.querySelectorAll('.project-group');
+    projectTabs.forEach(tab => tab.addEventListener('click', () => {
+      const group = tab.dataset.group;
+      projectTabs.forEach(t => {
+        t.classList.toggle('is-active', t === tab);
+        t.setAttribute('aria-pressed', t === tab);
+      });
+      projectGroups.forEach(g => { g.hidden = group !== 'all' && g.dataset.group !== group; });
+    }));
 
     // ─── Scroll-reveal sections ──────────────────────────────────────
     const revealEls = document.querySelectorAll('.reveal');

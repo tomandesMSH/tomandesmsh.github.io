@@ -99,7 +99,74 @@
     <section class="content-section reveal" id="projects">
       <h1 class="page-title" data-i18n="projectsTitle">Projects</h1>
 
-      <h2 class="section-title">Windows Software</h2>
+      <div class="project-tabs" role="group" aria-label="Project categories" data-i18n-aria="projectTabs">
+        <button type="button" class="project-tab is-active" data-group="all" aria-pressed="true" data-i18n="tabAll">All</button>
+        <button type="button" class="project-tab" data-group="games" aria-pressed="false" data-i18n="tabGames">Games and mods</button>
+        <button type="button" class="project-tab" data-group="windows" aria-pressed="false" data-i18n="tabWindows">Windows</button>
+        <button type="button" class="project-tab" data-group="web" aria-pressed="false" data-i18n="tabWeb">Web</button>
+        <button type="button" class="project-tab" data-group="utilities" aria-pressed="false" data-i18n="tabUtilities">Utilities</button>
+      </div>
+
+      <div class="project-group" data-group="games">
+      <h2 class="section-title" data-i18n="games">Games and mods</h2>
+      <ul class="project-list">
+        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - A mod installer for the original Flash version of The Binding of Isaac. Tick the mods, click Install and play. (Python, C#)</span>
+          <ul>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest" data-i18n="download">Download</a></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a><span data-i18n="pEid"> - Descriptions of items, trinkets, cards and pills right in the game. (Lua, ActionScript, Python)</span></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-StatsHUD">Stats HUD</a><span data-i18n="pStatsHud"> - Isaac's current stats and the devil/angel room chances, like in Repentance. (ActionScript, Python)</span></li>
+            <li><a href="https://github.com/tomandesMSH/FlashTBoI-DebugConsole">Debug Console</a><span data-i18n="pDebugConsole"> - The debug console from Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)</span></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/tboi-flash-mods-1.png"><img src="../screenshots/tboi-flash-mods-1.png" alt="TBoI Flash Mods - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/tboi-flash-mods-2.png"><img src="../screenshots/tboi-flash-mods-2.png" alt="TBoI Flash Mods - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - A mod for The Binding of Isaac: Repentance+. Packs the seed and your unlocks into one code, so everyone plays the same run. (Lua)</span>
+          <ul>
+            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819928092">Steam Workshop</a></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/shareseed-1.png"><img src="../screenshots/shareseed-1.png" alt="ShareSeed - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/shareseed-2.png"><img src="../screenshots/shareseed-2.png" alt="ShareSeed - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://tomandes.eu/isaac-run-history/">Isaac Run History</a><span data-i18n="pRunHistory"> - Statistics for The Binding of Isaac: Repentance+ (REPENTOGON). The mod records every run and a web page turns them into statistics: win rate, bosses, items, records. (Lua, TypeScript)</span>
+          <ul>
+            <li><a href="https://tomandes.eu/isaac-run-history/" data-i18n="website">Website</a></li>
+            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3841181539">Steam Workshop</a></li>
+            <li><a href="https://github.com/tomandesMSH/isaac-run-history">GitHub</a></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/isaac-run-history-1.jpg"><img src="../screenshots/isaac-run-history-1.jpg" alt="Isaac Run History - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/isaac-run-history-2.jpg"><img src="../screenshots/isaac-run-history-2.jpg" alt="Isaac Run History - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - A save editor for Just Shapes and Beats. (Python)</span>
+          <ul>
+            <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest" data-i18n="download">Download</a></li>
+          </ul>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/jsab-save-editor-1.png"><img src="../screenshots/jsab-save-editor-1.png" alt="JSaB Save Editor - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/jsab-save-editor-2.png"><img src="../screenshots/jsab-save-editor-2.png" alt="JSaB Save Editor - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - WASD controls in games that only support the arrow keys. (Python)</span>
+          <ul>
+            <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Download</a></li>
+          </ul>
+        </li>
+        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a> <span class="status-badge" data-i18n="statusOnHold">On hold</span><span data-i18n="pUpgrader"> - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua) I'm not working on it anymore, my designer ran off.</span>
+          <div class="project-shots">
+            <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="../screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
+            <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="../screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
+          </div>
+        </li>
+      </ul>
+      </div>
+
+      <div class="project-group" data-group="windows">
+      <h2 class="section-title" data-i18n="windowsApps">Windows apps</h2>
       <ul class="project-list">
         <li><a href="https://github.com/tomandesMSH/KASPAR">KASPAR</a><span data-i18n="pKaspar"> - A Windows "debloater", a set of tools for tweaking the system (C#, WinUI 3)</span>
           <ul>
@@ -152,7 +219,9 @@
           </div>
         </li>
       </ul>
+      </div>
 
+      <div class="project-group" data-group="web">
       <h2 class="section-title" data-i18n="webProjects">Web projects</h2>
       <ul class="project-list">
         <li><a href="https://muzio.tomandes.eu/">Muzio</a><span data-i18n="pKeyboardHero"> - A web app for ZUŠ Moravský Krumlov (an art school) that gets children to practise their instrument at home regularly, in a playful way. (TypeScript)</span>
@@ -203,64 +272,10 @@
           </ul>
         </li>
       </ul>
+      </div>
 
-      <h2 class="section-title" data-i18n="games">Games and mods</h2>
-      <ul class="project-list">
-        <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods">TBoI Flash Mods</a><span data-i18n="pTboiMods"> - A mod installer for the original Flash version of The Binding of Isaac. Tick the mods, click Install and play. (Python, C#)</span>
-          <ul>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-Mods/releases/latest" data-i18n="download">Download</a></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-EID">Flash EID</a><span data-i18n="pEid"> - Descriptions of items, trinkets, cards and pills right in the game. (Lua, ActionScript, Python)</span></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-StatsHUD">Stats HUD</a><span data-i18n="pStatsHud"> - Isaac's current stats and the devil/angel room chances, like in Repentance. (ActionScript, Python)</span></li>
-            <li><a href="https://github.com/tomandesMSH/FlashTBoI-DebugConsole">Debug Console</a><span data-i18n="pDebugConsole"> - The debug console from Repentance: giveitem, spawn, goto, stage... (ActionScript, Python)</span></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/tboi-flash-mods-1.png"><img src="../screenshots/tboi-flash-mods-1.png" alt="TBoI Flash Mods - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/tboi-flash-mods-2.png"><img src="../screenshots/tboi-flash-mods-2.png" alt="TBoI Flash Mods - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/ShareSeed">ShareSeed</a><span data-i18n="pShareSeed"> - A mod for The Binding of Isaac: Repentance+. Packs the seed and your unlocks into one code, so everyone plays the same run. (Lua)</span>
-          <ul>
-            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819928092">Steam Workshop</a></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/shareseed-1.png"><img src="../screenshots/shareseed-1.png" alt="ShareSeed - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/shareseed-2.png"><img src="../screenshots/shareseed-2.png" alt="ShareSeed - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://tomandes.eu/isaac-run-history/">Isaac Run History</a><span data-i18n="pRunHistory"> - Statistics for The Binding of Isaac: Repentance+ (REPENTOGON). The mod records every run and a web page turns them into statistics: win rate, bosses, items, records. (Lua, TypeScript)</span>
-          <ul>
-            <li><a href="https://tomandes.eu/isaac-run-history/" data-i18n="website">Website</a></li>
-            <li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3841181539">Steam Workshop</a></li>
-            <li><a href="https://github.com/tomandesMSH/isaac-run-history">GitHub</a></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/isaac-run-history-1.jpg"><img src="../screenshots/isaac-run-history-1.jpg" alt="Isaac Run History - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/isaac-run-history-2.jpg"><img src="../screenshots/isaac-run-history-2.jpg" alt="Isaac Run History - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/tboi-upgrader">Item Upgrader</a><span data-i18n="pUpgrader"> - A mod for The Binding of Isaac: Repentance+ for upgrading and duplicating items. (Lua)</span>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/item-upgrader-1.png"><img src="../screenshots/item-upgrader-1.png" alt="Item Upgrader - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/item-upgrader-2.png"><img src="../screenshots/item-upgrader-2.png" alt="Item Upgrader - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor">JSaB Save Editor</a><span data-i18n="pJsab"> - A save editor for Just Shapes and Beats. (Python)</span>
-          <ul>
-            <li><a href="https://github.com/tomandesMSH/Just-Shapes-and-Beats-save-editor/releases/latest" data-i18n="download">Download</a></li>
-          </ul>
-          <div class="project-shots">
-            <figure class="shot" data-label="screenshots/jsab-save-editor-1.png"><img src="../screenshots/jsab-save-editor-1.png" alt="JSaB Save Editor - screenshot 1" loading="lazy" onerror="this.remove()"></figure>
-            <figure class="shot" data-label="screenshots/jsab-save-editor-2.png"><img src="../screenshots/jsab-save-editor-2.png" alt="JSaB Save Editor - screenshot 2" loading="lazy" onerror="this.remove()"></figure>
-          </div>
-        </li>
-        <li><a href="https://github.com/tomandesMSH/WASD-to-arrows">WASD-to-arrows</a><span data-i18n="pWasd"> - WASD controls in games that only support the arrow keys. (Python)</span>
-          <ul>
-            <li><a href="https://github.com/tomandesMSH/WASD-to-arrows/releases/latest" data-i18n="download">Download</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <h2 class="section-title" data-i18n="other">Other</h2>
+      <div class="project-group" data-group="utilities">
+      <h2 class="section-title" data-i18n="utilities">Utilities and scripts</h2>
       <ul class="project-list">
         <li><a href="https://github.com/tomandesMSH/VytahniTo">VytáhniTo</a><span data-i18n="pVytahnito"> - A Chrome extension that downloads every image and video on a page. (JS)</span>
           <div class="project-shots">
@@ -293,6 +308,7 @@
         </li>
         <li><a href="https://github.com/tomandesMSH/RepoSync">RepoSync</a><span data-i18n="pRepoSync"> - Clones and updates all repositories of selected GitHub users, with filters in a single config.json. (Python)</span></li>
       </ul>
+      </div>
 
     </section>
 
@@ -486,6 +502,18 @@
         navToggle.setAttribute('aria-expanded', 'false');
       });
     });
+
+    // ─── Project categories ──────────────────────────────────────────
+    const projectTabs = document.querySelectorAll('.project-tab');
+    const projectGroups = document.querySelectorAll('.project-group');
+    projectTabs.forEach(tab => tab.addEventListener('click', () => {
+      const group = tab.dataset.group;
+      projectTabs.forEach(t => {
+        t.classList.toggle('is-active', t === tab);
+        t.setAttribute('aria-pressed', t === tab);
+      });
+      projectGroups.forEach(g => { g.hidden = group !== 'all' && g.dataset.group !== group; });
+    }));
 
     // ─── Scroll-reveal sections ──────────────────────────────────────
     const revealEls = document.querySelectorAll('.reveal');
