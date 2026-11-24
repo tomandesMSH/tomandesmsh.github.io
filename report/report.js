@@ -5,7 +5,7 @@
   const ENDPOINT = /^(localhost|127\.0\.0\.1)$/.test(location.hostname)
     ? 'http://localhost:8787/api/report'
     : 'https://tomandes-report.vercel.app/api/report';
-  // The apps the ZUŠ Moravský Krumlov pupils use: only they offer "Jsem žákem ZUŠ".
+  // The apps ZUŠ pupils use: only they offer "Jsem žákem základní umělecké školy."
   const ZUS_APPS = ['keyboard-utils', 'keyboard-hero'];
 
   // Every text of the page. HTML has the Czech ones, so the page reads fine before this runs.
@@ -18,7 +18,7 @@
       app: 'Aplikace',
       appPick: 'Vyber aplikaci…',
       appOther: 'Jiné / tenhle web',
-      zus: 'Jsem žákem ZUŠ Moravský Krumlov',
+      zus: 'Jsem žákem základní umělecké školy.',
       kind: 'O co jde',
       kindBug: 'Něco nefunguje',
       kindIdea: 'Nápad na zlepšení',
@@ -54,7 +54,7 @@
       app: 'App',
       appPick: 'Choose an app…',
       appOther: 'Other / this website',
-      zus: 'I am a pupil of ZUŠ Moravský Krumlov',
+      zus: 'I am an art school pupil',
       kind: "What it's about",
       kindBug: 'Something is broken',
       kindIdea: 'An idea',
@@ -124,7 +124,7 @@
     }),
   );
 
-  // "Jsem žákem ZUŠ" is offered with the school's apps only; it just marks the report.
+  // "Jsem žákem základní umělecké školy." is offered with the school's apps only; it just marks the report.
   function update() {
     const school = ZUS_APPS.includes(app.value);
     zusRow.hidden = !school;
